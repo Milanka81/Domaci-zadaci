@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table id="table">
+        <tr>
+            <td>dffdfd</td>
+            <td>fdfdfdfd</td>
+        </tr>
+        <tr>
+            <td>fdfdfdf</td>
+            <td>dfdfdfdf</td>
+        </tr>
+    </table>
+
+    <script>
+
+        const btnDodaj = document.createElement('button')
+        btnDodaj.textContent = 'Dodaj'
+        const table = document.querySelector('#table');
+        document.body.append(btnDodaj)
+
+        const dodaj = (row) => {
+            btnDodaj.addEventListener('click', () => {
+                let row = table.insertRow(0)
+                let cell1 = row.insertCell(0);
+                let cell2 = row.insertCell(0);
+                cell1.textContent = 'dodato1';
+                cell2.textContent = 'dodato';
+            })
+        }
+         dodaj(0)
+
+
+         
+
+
+
+
+    </script>
+
+</body>
+
+</html>
