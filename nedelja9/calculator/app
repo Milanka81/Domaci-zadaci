@@ -1,0 +1,37 @@
+import { useState } from "react";
+import React from "react";
+
+
+   function App() {
+    const [result, setResult] = useState(0)
+    const [number, setNumber] = useState(0)
+    const [view, setView] = useState('0')
+    
+
+
+  return (
+    <div className="App">
+     <div className="calculator">
+       <div className="display">
+       <input type="text" value={result} placeholder="Result"/>
+       <input type="number" onChange={(e) => setNumber(e.target.value)} placeholder="Number"/>
+       </div>
+
+       <div className="operators">
+         <button onClick={() => {setResult(result + parseInt(number)), setView(view + "+" + parseInt(number))}}>+</button>
+         <button onClick={() => {setResult(result - parseInt(number)), setView(view + "-" + parseInt(number))}}>-</button>
+         <button onClick={() => {setResult(result * parseInt(number)), setView(view + "*" + parseInt(number))}}>*</button>
+         <button onClick={() => {setResult(result / parseInt(number)), setView(view + "/" + parseInt(number))}}>/</button>
+         <p></p>
+
+         <button onClick ={() => {
+           setResult(0)
+          setNumber(0)}
+         } >Clear</button>
+       </div>
+     </div>
+    </div>
+  );
+}
+
+export default App;
