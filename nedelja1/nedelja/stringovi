@@ -1,0 +1,75 @@
+//1. Proveriti koji je string najduzi i ispisati samo njega
+
+{
+
+    let string1 = "neki prvi string"
+    let string2 = "neki drugi string koji je i duzi string"
+    let string3 = "neki treci string koji je dugacak"
+    let string4 = "neki cetvrti"
+
+
+    if (string1.length > string2.length && string1.length > string3.length && string1.length > string4.length) {
+        console.log(string1);
+    } else
+        if (string2.length > string3.length && string2.length > string4.length) {
+            console.log(string2);
+
+        } else if (string3.length > string4.length) {
+            console.log(string3);
+
+        } else
+            console.log(string4);
+
+
+
+    //2. Ispisati najkraci string koji sadrzi rec "string"
+
+    if (string1.length < string2.length && string1.length < string3.length && string1.length < string4.length && string1.includes("string")) {
+        console.log(string1);
+
+    } else if (string2.length < string3.length && string2.length < string4.length && string2.includes("string")) {
+
+        console.log(string2);
+
+    } else if (string3.length < string4.length && string3.includes("string")) {
+
+        console.log(string3);
+
+    } else if
+
+        (string4.includes("string")) {
+        console.log(string4);
+    }
+
+
+}
+
+{
+
+}
+
+//3. sastaviti sve stringove bez prve reci "neki" osim ako string sadrzi deo recenice "string koji je", takve stringove izostaviti
+
+
+
+
+{  //1. Na osnovu kolicine i cene artikla ispisati ukupnu cenu
+//Kolicina je zadata u gramima
+//cena je zadata po kilogramu
+
+let Kolicina = 2500
+let cena = 350
+let ukupnaCena = Kolicina/1000 * cena
+
+console.log(ukupnaCena);
+
+//2. Dopuniti 4. zadatak sa casa kolicinom novca, i ispisati racun (ako nema dovoljno novca ispisati poruku)
+
+let kolicinaNovca = 850
+
+if (ukupnaCena < kolicinaNovca) {
+    console.log(ukupnaCena);
+}else 
+     console.log("nema dovoljno novca");
+} 
+
