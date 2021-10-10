@@ -1,0 +1,42 @@
+body{
+
+}
+#div1 {
+    text-align: center;
+}
+
+aside em{
+ color: red;
+
+
+}
+aside{
+    float: left;
+    margin-left: 0px;
+   
+}
+#div2 h2{
+    text-align: left;
+}
+article{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 70%;
+        height: 200%;
+        padding: 150px;
+        float: right;
+    
+main{
+    margin-top: 0px;
+}
+}
+
+label {
+    color: red;
+
+}
+   form{
+	   border: solid black 2px;
+	   width: 250px;
+   } 
