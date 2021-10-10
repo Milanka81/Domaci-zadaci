@@ -1,0 +1,84 @@
+let pokemoni = [{
+    ime: 'Pikacu',
+    vrsta: 'elektricni',
+    sposobnosti: ['staticki elektricitet'],
+    karakteristike: {
+        napad: 55,
+        odbrana: 40,
+        brzina: 90
+    }
+},
+{
+    ime: 'Carmander',
+    vrsta: 'vatreni',
+    sposobnosti: ['bljuje vatru'],
+    karakteristike: {
+        napad: 52,
+        odbrana: 43,
+        brzina: 65
+    }
+},
+{
+    ime: 'Ivi',
+    vrsta: 'normani',
+    sposobnosti: ['adaptacija, iscezavanje, intuicija'],
+    karakteristike: {
+        napad: 55,
+        odbrana: 50,
+        brzina: 55
+    }
+},
+{
+    ime: 'Zasian',
+    vrsta: 'carobni',
+    sposobnosti: ['neustrasivost, brzina'],
+    karakteristike: {
+        napad: 130,
+        odbrana: 115,
+        brzina: 138
+    }
+}]
+
+const div = document.createElement('div')
+
+const btn1 = document.createElement('button')
+btn1.textContent = 'Izaberi pokemona'
+btn1.addEventListener('click', () => {
+    pokemoni.forEach(pokemon => {
+        let noviBtn = document.createElement('button')
+        noviBtn.innerHTML = pokemon.ime
+        div.appendChild(noviBtn)
+        btn1.remove()
+        noviBtn.addEventListener('click', ()=>{
+            pokemoni.forEach(pokemon =>{
+                let p = document.createElement('p')
+                    for(let i = 0; i<=pokemoni.length; i++){
+                        p.innerHTML = Object.entries(pokemoni[i])
+                        div.append(p)
+                    }
+                
+            })})
+        })
+    })
+const btn2 = document.createElement('button')
+btn2.textContent = 'Izaberi protivnika'
+btn2.addEventListener('click', () => {
+    pokemoni.forEach(pokemon => {
+        let noviBtn2 = document.createElement('button')
+        noviBtn2.innerHTML = pokemon.ime
+        div.appendChild(noviBtn2)
+        btn2.remove()
+        noviBtn2.addEventListener('click', ()=>{
+            pokemoni.forEach(pokemon =>{
+                let p1 = document.createElement('p')
+                div.append(p1)
+                p1.append(...pokemon.karakteristike)
+                    for(const key in pokemon){
+                        p1.innerHTML = console.log(key, pokemon(key)); 
+                        
+                    }
+                
+            })})
+    })})
+div.append(btn1, btn2)
+document.body.append(div)
