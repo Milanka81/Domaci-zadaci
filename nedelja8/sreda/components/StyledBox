@@ -1,0 +1,15 @@
+import styled from "styled-components";
+
+const StyledBox = styled.div(props =>({
+    background: props.background,
+    display: "inline-block",
+    height: '100px',
+    width: '100px',
+    padding: '1rem' , 
+    fontSize: '1.2rem',
+    margin : '10px',
+    boxShadow: '0 30px 40px rgba(0,0,0,0.6)'
+}))
+
+
+export default StyledBox
