@@ -1,0 +1,94 @@
+// 1. Napisati funkciju koja vrsi sumiranje i mnozenje jednog niza i vratiti te vrednosti u niz
+
+{
+  let niz = [1, 2, 3, 4]
+  function sumiranjeIMnozenje(niz) {
+    let sum = 0
+    let proizvod = 1
+
+    for (let i = 0; i < niz.length; i++) {
+      sum += niz[i]
+      proizvod *= niz[i]
+
+    } niz.push(sum, proizvod)
+    return niz
+  }
+
+  console.log(sumiranjeIMnozenje(niz));
+}
+
+console.log('----2--------------------------------------------');
+
+//2. Napisati funkciju koja iz datog niza izbacuje null, undefined, NaN, 0, "" itd...
+
+{
+  function izbacivanjeIzNiza(niz) {
+    let noviNiz = niz.filter(Boolean)
+    return noviNiz
+  }
+}
+let niz = [0, 1, "", 2, undefined, 67, null, 3, NaN, 'abvg'];
+console.log(izbacivanjeIzNiza(niz));
+
+console.log('----4---------------------------------------');
+
+/*
+* 4. За првих 100 бројева исписати:
+*       ако је дељив са 3  Fizz, са 5  Buzz, и са оба  FizzBuzz, у супротном Broj
+*       Ако је дељив са 3,5,7 - FizzBuzzZazz
+*       3,5 - FizzBuzz
+*       3,7 - FizzZazz
+*       5,7 - BuzzZazz{
+ */
+{
+
+  for (let N = 1; N < 100; N++) {
+    if (N % 3 == 0 && N % 5 == 0 && N % 7 == 0) {
+      console.log(`${N} FizzBuzzZazz`);
+    } else if (N % 5 == 0 && N % 7 == 0) {
+      console.log(`${N} BuzzZazz`);
+    } else if (N % 3 == 0 && N % 7 == 0) {
+      console.log(` ${N} FizzZazz`);
+    } else if (N % 3 == 0 && N % 5 == 0) {
+      console.log(` ${N} FizzBuzz`);
+    } else if (N % 7 == 0) {
+      console.log(` ${N} Zazz`);
+    } else if (N % 5 == 0) {
+      console.log(` ${N} Buzz`);
+    } else if (N % 3 == 0) {
+      console.log(`${N} Fizz`);
+    } else {
+      console.log(N);
+    }
+
+
+  }
+  console.log('-----5------------------------------');
+
+  /* 5. Izvrsiti inverziju brojeva bez pomocne promenljive. 
+  *      Pr: x = 5 y = 9
+  *      Resenje: x = 9 y = 5
+  *      pom = "ne mozete koristiti"
+  * 
+  */
+  {
+    let a = 1, b = 2;
+    a = a ^ b
+    b = a ^ b
+    a = a ^ b
+
+    console.log(a);
+    console.log(b);
+  }
+  console.log('------drugi nacin----------------------------------');
+  {
+    let a = 3, b = 4
+
+    a = b + (b = a, 0)
+    console.log(a);
+    console.log(b);
+
+
+
+  }
+}
