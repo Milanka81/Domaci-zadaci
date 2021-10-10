@@ -1,0 +1,34 @@
+/**--------------------
+Nacrtati dijamant kao na primeru:
+
+     *
+    ***
+   *****
+  *******
+ *********
+  *******
+   *****
+    ***
+     *
+
+
+ ---------------------*/
+
+{
+    let N = 9
+    let red = ''
+    let red2 = ''
+
+    for (let i = 1; i <= N; i++) {
+        if (i % 2 !== 0) {
+            red = ' '.repeat((N - i) / 2) + '*'.repeat(i) + ' '.repeat((N - i) / 2)
+            console.log(red);
+        }
+    }
+    for (let i = 1; i <= N; i++) {
+        red2 = ' '.repeat(i) + '*'.repeat(N -(i * 2)) + ' '.repeat(i)
+        console.log(red2);
+    }
+}
+
+
