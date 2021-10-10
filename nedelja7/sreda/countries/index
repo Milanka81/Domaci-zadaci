@@ -1,0 +1,66 @@
+
+import Countries from "./components/Countries";
+import { getAllCountries } from "./service";
+
+
+const header = document.querySelector('header')
+const main = document.querySelector('main')
+
+getAllCountries().then(res => {
+  let random15 = []
+
+  for (let i = 0; i < 15; i++) {
+    random15.push(res.data[Math.floor(Math.random()* res.data.lenght)])
+    
+  }
+
+  main.append(...Countries(random15))
+
+  cardClick(random15)
+})
+
+
+
+
+function cardClick(countries){
+  let allCards = document.querySelectorAll('.country')
+
+  allCards.forEach(card => {
+
+    card.addEventListener('click', ()=>{
+      countries.forEach(country => {
+        if(country.name == card.firstElementChild.nextElementSibling.textContent){
+          countryDetails(country,countries)
+        }
+      })
+
+    })
+  })
+
+}
+
+function countryDetails(country, countries15){
+  main.innerHTML = ''
+  main.append(...Countries([country]))
+
+ 
+  let allLanguages = ''
+  country.languages.forEach(language => {
+    if(allLanguages == ''){
+      allLanguages += language.name
+    }else{
+      allLanguages += ',' + language.name
+    }
+  })
+  let allTimezones = ''
+  country.timezones.forEach(timezone =>{
+    if(allTimezones == ''){
+      allTimezones += timezone
+    }else{
+      allTimezones += ',' + timezone
+    }
+  })
+  main.firstElementChild.lastElementChild.innerHTML += `All languages: ${allLanguages} <br> Timezone: ${allTimezones}`
+
+  header(country.name, countries15)
+}
