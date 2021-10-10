@@ -1,0 +1,6 @@
+import Country from "./Country";
+
+const Countries = (countries) => countries.map(country => Country(country))
+
+ 
+export default Countries;
