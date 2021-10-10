@@ -1,0 +1,98 @@
+
+//1. Napisati funkciju koja ispisuje sve elemente datog niza koji su deljivi sa 5
+{
+    let niz = [3, 5, 10, 12, 17, 20]
+
+    function deljiviSa5(niz) {
+        for (let i = 0; i <= niz.length; i++) {
+
+            if (niz[i] % 5 == 0)
+                console.log(niz[i]);
+        }
+    } deljiviSa5(niz)
+}
+
+//2. Napraviti objekat pokemon koji sadrži sledeće informacije: (Napravite makar 4 različita pokemona)
+// * Ime 
+// * Vrsta 
+// * Sposobnosti (niz sposobnosti pokemona) 
+// * Karakteristike (objekat sa informacijama : napad (broj), odbrana (broj), brzina (broj))
+
+//(Napraviti niz od ovih objekata)
+
+{
+    let pokemon1 = {
+        ime: 'Pikacu',
+        vrsta: 'elektricni',
+        sposobnosti: ['staticki elektricitet'],
+        karakteristike: {
+            napad: 55,
+            odbrana: 40,
+            brzina: 90
+        }
+    }
+    let pokemon2 = {
+        ime: 'Carmander',
+        vrsta: 'vatreni',
+        sposobnosti: ['bljuje vatru'],
+        karakteristike: {
+            napad: 52,
+            odbrana: 43,
+            brzina: 65
+        }
+    }
+    let pokemon3 = {
+        ime: 'Ivi',
+        vrsta: 'normani',
+        sposobnosti: ['adaptacija, iscezavanje, intuicija'],
+        karakteristike: {
+            napad: 55,
+            odbrana: 50,
+            brzina: 55
+        }
+    }
+    let pokemon4 = {
+        ime: 'Zasian',
+        vrsta: 'carobni',
+        sposobnosti: ['neustrasivost, brzina'],
+        karakteristike: {
+            napad: 130,
+            odbrana: 115,
+            brzina: 138
+        }
+        //3. Napraviti funkciju koja prima niz gore napravljenih objekata i vraća jedan niz sposobnosti svih pokemona
+    }
+
+    let pokemoni = [pokemon1, pokemon2, pokemon3, pokemon4]
+
+
+    function sposobnosti(pokemoni) {
+
+        pokemoni.forEach(pokemon => { console.log(pokemon.sposobnosti.join()); });
+    }
+    sposobnosti(pokemoni)
+    ///////////////////////////////////////////ZA PETAK////////////////////////////////////
+    //4. Sortirati pokemone po brzini, rastuće.
+
+    // Sortiranje niza pomoću funkcije upoređivanja
+
+    pokemoni.sort((pokemon1, pokemon2) => pokemon1.karakteristike.brzina - pokemon2.karakteristike.brzina)
+    console.log(pokemoni);
+
+    //5. Napraviti funkciju koja prima niz pokemona,
+    // poredi pokemone po jačini i vraća kao pobednika onog koji ima najveću jačinu napada//
+
+    console.log('-------------------------------------------------');
+
+
+
+    let m = pokemon1.karakteristike.napad
+    pokemoni.forEach(pokemon => {
+        if (pokemon.karakteristike.napad > m) {
+            m = pokemon
+        }return m
+        
+    })
+    console.log(m);
+
+}
