@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="form">
+        <label class="main-label">
+            <h2>Registration</h2>
+        </label><br><br>
+
+        <input type="text" id="name" placeholder="name" >
+        <label for="name" class="lName"></label>
+        <div id="name-error" class="error-msg"></div>
+        <br>
+        <br>
+
+        <input type="text" id="surname" placeholder="surname">
+        <label for="surname" class="lSurname"></label>
+        <div id="surname-error" class="error-msg"></div>
+        <br>
+        <br>
+
+        <input type="password" id="password" placeholder="password">
+        <label for="password" class="lPassword"></label>
+        <div id="password-error" class="error-msg"></div>
+        <br>
+        <br>
+
+        <input type="password" id="password-confirm" placeholder="confirm password">
+        <label for="password-confirm" class="lPassword-confirm"></label>
+        <div id="confirm-error" class="error-msg"></div>
+        <br>
+        <br>
+        <div class="div-checkboxes" aria-required="true" >
+            <div>
+                <input type="checkbox" name="courses" id="check-1">
+                <label for="check-1" class="lCheckbox">HTML</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="courses" id="check-2" >
+                <label for="check-2" class="lCheckbox">CSS</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="courses" id="check-3" >
+                <label for="check-3" class="lCheckbox">Javascript</label>
+            </div>
+            <div>
+                <input type="checkbox" name="courses" id="check-4" >
+                <label for="check-4" class="lCheckbox">PHP</label>
+            </div>
+            <div id="checkBox-error" class="error-msg"></div>
+            <br>
+        </div>
+        <label class="lCheckbox-error"></label>
+
+        </div>
+
+
+        <select name="cities" id="city">
+            <br>
+            <option value="0" selected disabled>Select city</option>
+            <option value="1">Beograd</option>
+            <option value="2">Novi Sad</option>
+            <option value="3">Nis</option>
+            <option value="4">Subotica</option>
+        </select>
+        <label class="lCity"></label>
+        <br>
+        <div id="city-error" class="error-msg"></div>
+        <div class="div-genders">
+            <br>
+            <input type="radio" name="gender" id="gender-male">
+            <label for="gender-male" class="lRadio-1">Male</label>
+
+            <input type="radio" name="gender" id="gender-female"
+            <label for="gender-female" class="lRadio-2">Female</label>
+        </div>
+        <label class="lGender"></label>
+        <div id="gender-error" class="error-msg"></div>
+
+        <br>
+
+        <button class="submit">Register</button>
+        
+    </div>
+    <div class="users-list">
+
+    </div>
+    <script src="domaci.js"></script>
+</body>
+
+</html>
